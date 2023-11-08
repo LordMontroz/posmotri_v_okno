@@ -16,17 +16,8 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  inline-size: 95%;
-  gap: 30px;
+  display: grid;
+  place-content: center;
 }
 
 h1,
@@ -48,6 +39,13 @@ ol {
   list-style: none;
 }
 
+.content {
+  width: 1140px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-end;
+}
+
 .search-form {
   display: flex;
   flex-direction: row;
@@ -57,8 +55,8 @@ ol {
 
 .content__list {
   position: relative;
-  max-height: 534px;
   overflow-y: scroll;
+  height: 298px;
 }
 
 .content__details {
@@ -72,7 +70,7 @@ ol {
 .result__video-container {
   position: relative;
   width: 711px;
-  height: 386px;
+  height: 402px;
   padding-bottom: 16px;
 }
 
@@ -103,12 +101,6 @@ ol {
   width: 200px;
 }
 
-.search-form__fieldset {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-}
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
@@ -151,10 +143,6 @@ ol {
   white-space: nowrap;
 }
 
-fieldset {
-  border: none;
-}
-
 .search-form__label {
   display: flex;
   width: fit-content;
@@ -167,7 +155,6 @@ fieldset {
 }
 
 .search-form__textfield {
-  color: rgba(255, 255, 255, 0.70);
   appearance: none;
 }
 
@@ -176,4 +163,12 @@ input {
   font-size: inherit;
   color: inherit;
   background-color: transparent;
+}
+
+.search-form__fieldset {
+  display: inline-flex;
+  border: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
 }
